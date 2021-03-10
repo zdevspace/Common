@@ -16,7 +16,7 @@ public class DesignableUITextField: UITextField{
 public extension UITextField{
     @IBInspectable var placeholderColor: UIColor? {
         get {
-            return self.placeHolderColor
+            return self.placeholderColor
         }
         set {
             self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
