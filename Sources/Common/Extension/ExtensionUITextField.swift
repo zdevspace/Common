@@ -14,7 +14,7 @@ public class DesignableUITextField: UITextField{
 }
 
 public extension UITextField{
-    @IBInspectable var placeHolderColor: UIColor? {
+    @IBInspectable var placeholderColor: UIColor? {
         get {
             return self.placeHolderColor
         }
