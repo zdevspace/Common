@@ -14,6 +14,14 @@ public class DesignableUITextField: UITextField{
 }
 
 public extension UITextField{
+    @IBInspectable var placeHolderColor: UIColor? {
+        get {
+            return self.placeHolderColor
+        }
+        set {
+            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
+        }
+    }
     
     //For Login Title
     @objc public func setAttributedFont(){
@@ -31,12 +39,12 @@ public extension UITextField{
         
         var placeHolder = NSMutableAttributedString()
         placeHolder = NSMutableAttributedString(string:self.placeholder!, attributes: attributes)
-
+        
         self.attributedPlaceholder = placeHolder
     }
     
     @objc public func setAttributedFont_Red(){
-
+        
         #if swift(>=4.2)
         let attributes:[NSAttributedString.Key : Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.red,
@@ -44,8 +52,8 @@ public extension UITextField{
         ]
         #else
         let attributes:[NSAttributedStringKey : Any] = [
-        NSAttributedStringKey.foregroundColor: UIColor.red,
-        NSAttributedStringKey.font : self.font!
+            NSAttributedStringKey.foregroundColor: UIColor.red,
+            NSAttributedStringKey.font : self.font!
         ]
         #endif
         
