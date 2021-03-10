@@ -59,12 +59,12 @@ open class GitKeychain {
     
     let readLock = NSLock()
    
-    init(keyPrefix: String, securityItemManager: GitSecurityItemManaging = GitSecurityItemManager.default) {
+    required public init(keyPrefix: String, securityItemManager: GitSecurityItemManaging = GitSecurityItemManager.default) {
         self.keyPrefix = keyPrefix
         self.securityItemManager = GitSecurityItemManager.default
     }
     
-    init(securityItemManager: GitSecurityItemManaging = GitSecurityItemManager.default) {
+    required public init(securityItemManager: GitSecurityItemManaging = GitSecurityItemManager.default) {
         self.securityItemManager = securityItemManager
     }
     
