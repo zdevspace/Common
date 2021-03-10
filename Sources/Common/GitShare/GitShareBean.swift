@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class GitShareBean {
     public var text:Array<String> = Array<String>()

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Grace Generation Information Technology. All Rights Reserved. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIViewController {
     public func shareText(shareBean:GitShareBean){
