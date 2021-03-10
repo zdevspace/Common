@@ -8,6 +8,6 @@
 
 import Foundation
 
-class GitConstant {
+public class GitConstant {
     static let frameworkBundleID = "com.ggit.mobilesdk.GGITCommon-iOS"
 }

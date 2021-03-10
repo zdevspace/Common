@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class GitKeychain {
+open class GitKeychain {
     public enum GitKeychainConstants {
         static let accessible = kSecAttrAccessible as String
         static let accessGroup = kSecAttrAccessGroup as String
