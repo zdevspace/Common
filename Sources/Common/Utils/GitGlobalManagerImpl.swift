@@ -6,14 +6,7 @@
 //  Copyright © 2018 Grace Generation Information Technology. All Rights Reserved. All rights reserved.
 //
 
-import Foundation
-#if canImport(UIKit)
 import UIKit
-#elseif canImport(AppKit)
-// macOS – use NSColor
-#else
-
-#endif
 
 extension GitGlobalManager: GitGlobalManagerStub {
     public static func getAppVersion() -> String {
@@ -43,15 +36,15 @@ extension GitGlobalManager: GitGlobalManagerStub {
         return str
     }
     
-//    public static func showHUDInView(view:UIView, label:String, customView:UIImageView?){
+    public static func showHUDInView(view:UIView, label:String, customView:UIImageView?){
 //        let hud = GitProgressHUD.showAdded(to: view, animated: true)
-//        
+//
 //        hud.customView = customView
 //        hud.mode = .indeterminate
 //        hud.label.text = label
-//    }
-//    
-//    public static func hide(view:UIView){
+    }
+    
+    public static func hide(view:UIView){
 //        GitProgressHUD.hide(for: view, animated: true)
-//    }
+    }
 }

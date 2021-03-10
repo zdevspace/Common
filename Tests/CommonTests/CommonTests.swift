@@ -7,6 +7,7 @@ final class CommonTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
         XCTAssertEqual(Common().text, "Hello, World!")
+        XCTAssertEqual(GitConstant.frameworkBundleID, "com.ggit.mobilesdk.GGITCommon-iOS")
     }
 
     static var allTests = [

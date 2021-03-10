@@ -11,14 +11,14 @@ import UIKit
 extension GitKeychain {
     public enum GitKeychainAccessOptions: RawRepresentable {
         private enum GitKeychainConstants {
-            static let afterFirstUnlock = kSecAttrAccessibleAfterFirstUnlock.stringValue
-            static let afterFirstUnlockThisDeviceOnly = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly.stringValue
-            static let always = kSecAttrAccessibleAlways.stringValue
-            static let alwaysThisDeviceOnly = kSecAttrAccessibleAlwaysThisDeviceOnly.stringValue
-            static let whenPasscodeSetThisDeviceOnly = kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly.stringValue
-            static let whenUnlocked = kSecAttrAccessibleWhenUnlocked.stringValue
-            static let whenUnlockedThisDeviceOnly = kSecAttrAccessibleWhenUnlockedThisDeviceOnly.stringValue
-            static let synchronizable = kSecAttrSynchronizable.stringValue
+            static let afterFirstUnlock = kSecAttrAccessibleAfterFirstUnlock as String
+            static let afterFirstUnlockThisDeviceOnly = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly as String
+            static let always = kSecAttrAccessibleAlways as String
+            static let alwaysThisDeviceOnly = kSecAttrAccessibleAlwaysThisDeviceOnly as String
+            static let whenPasscodeSetThisDeviceOnly = kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly as String
+            static let whenUnlocked = kSecAttrAccessibleWhenUnlocked as String
+            static let whenUnlockedThisDeviceOnly = kSecAttrAccessibleWhenUnlockedThisDeviceOnly as String
+            static let synchronizable = kSecAttrSynchronizable as String
         }
         
         /**

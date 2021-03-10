@@ -6,13 +6,7 @@
 //  Copyright © 2018 Grace Generation Information Technology. All Rights Reserved. All rights reserved.
 //
 
-#if !os(macOS)
 import UIKit
-#elseif canImport(AppKit)
-// macOS – use NSColor
-#else
-
-#endif
 
 public enum GitEnviroment: String {
     /// this is sit get method

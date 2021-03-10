@@ -5,37 +5,28 @@
 //  Created by Kelvin Leong on 05/10/2018.
 //  Copyright © 2018 Grace Generation Information Technology. All Rights Reserved. All rights reserved.
 //
-import Security
-import CoreFoundation
-import Foundation
 
-#if canImport(UIKit)
 import UIKit
-#elseif canImport(AppKit)
-// macOS – use NSColor
-#else
-
-#endif
 
 public class GitKeychain {
     public enum GitKeychainConstants {
-        static let accessible = kSecAttrAccessible.stringValue
-        static let accessGroup = kSecAttrAccessGroup.stringValue
-        static let account = kSecAttrAccount.stringValue
-        static let `class` = kSecClass.stringValue
-        static let matchLimit = kSecMatchLimit.stringValue
-        static let returnData = kSecReturnData.stringValue
-        static let returnAttributes = kSecReturnAttributes.stringValue
-        static let service = kSecAttrService.stringValue
-        static let valueData = kSecValueData.stringValue
+        static let accessible = kSecAttrAccessible as String
+        static let accessGroup = kSecAttrAccessGroup as String
+        static let account = kSecAttrAccount as String
+        static let `class` = kSecClass as String
+        static let matchLimit = kSecMatchLimit as String
+        static let returnData = kSecReturnData as String
+        static let returnAttributes = kSecReturnAttributes as String
+        static let service = kSecAttrService as String
+        static let valueData = kSecValueData as String
         
-        static let genericPassword = kSecClassGenericPassword.stringValue
-        static let matchLimitOne = kSecMatchLimitOne.stringValue
-        static let matchLimitAll = kSecMatchLimitAll.stringValue
-        static let synchronizable = kSecAttrSynchronizable.stringValue
+        static let genericPassword = kSecClassGenericPassword as String
+        static let matchLimitOne = kSecMatchLimitOne as String
+        static let matchLimitAll = kSecMatchLimitAll as String
+        static let synchronizable = kSecAttrSynchronizable as String
     }
     
-    static var defaultIdentifier: String = Bundle.main.infoDictionary?[kCFBundleIdentifierKey.stringValue] as? String
+    static var defaultIdentifier: String = Bundle.main.infoDictionary?[kCFBundleIdentifierKey as String] as? String
         ?? "\(GitConstant.frameworkBundleID).service"
     public static var defaultService: String = defaultIdentifier
     public static var defaultAccessGroup: String? = nil
