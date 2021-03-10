@@ -58,7 +58,6 @@ open class GitKeychain {
     open var synchronizable: Bool = false
     
     let readLock = NSLock()
-    
    
     init(keyPrefix: String, securityItemManager: GitSecurityItemManaging = GitSecurityItemManager.default) {
         self.keyPrefix = keyPrefix
