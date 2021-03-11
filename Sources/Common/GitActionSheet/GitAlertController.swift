@@ -41,7 +41,7 @@ public class GitAlertController: UIAlertController, UITableViewDataSource, UITab
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         controller = UITableViewController(style: .plain)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        controller.tableView.register(UINib.init(nibName: "GitActionCell", bundle: Bundle.init(identifier: GitConstant.frameworkBundleID)), forCellReuseIdentifier: "GitActionCell")
+        controller.tableView.register(UINib.init(nibName: "GitActionCell", bundle: Bundle.module), forCellReuseIdentifier: "GitActionCell")
         controller.tableView.dataSource = self
         controller.tableView.delegate = self
         controller.tableView.bounces = false
