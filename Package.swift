@@ -22,7 +22,7 @@ let package = Package(
             name: "Common",
             dependencies: [],
             resources:[
-                .process("Common")
+                .copy("Resources")
             ]),
         .testTarget(
             name: "CommonTests",
