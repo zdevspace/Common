@@ -22,8 +22,7 @@ let package = Package(
             name: "Common",
             dependencies: [],
             resources:[
-                .process("Resources/GitActionCell.xib"),
-                .process("Resources/TableFooterView.xib")
+              
             ]),
         .testTarget(
             name: "CommonTests",
