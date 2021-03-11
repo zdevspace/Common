@@ -56,6 +56,7 @@ public enum AlertIcon {
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+@available(iOS 13.0, *)
 extension AlertIcon {
 
     var image: UIImage? {
@@ -84,6 +85,7 @@ extension AlertIcon {
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+@available(iOS 13.0, *)
 public extension GitProgressHUD {
 
     class var animationType: AnimationType {
@@ -133,6 +135,7 @@ public extension GitProgressHUD {
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+@available(iOS 13.0, *)
 public extension GitProgressHUD {
 
     //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -231,6 +234,7 @@ public extension GitProgressHUD {
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+@available(iOS 13.0, *)
 public class GitProgressHUD: UIView {
 
     private var viewBackground: UIView?
@@ -1176,6 +1180,7 @@ public class GitProgressHUD: UIView {
 
 // MARK: - ProgressView
 //-------------------------------------------------------------------------------------------------------------------------------------------------
+@available(iOS 13.0, *)
 private class ProgressView: UIView {
 
     var color: UIColor = .systemBackground {
