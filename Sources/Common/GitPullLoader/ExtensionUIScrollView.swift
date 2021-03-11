@@ -16,7 +16,7 @@ extension UIScrollView {
      - parameter loadView: view that contain GitPullLoadable.
      - parameter type:     GitPullLoaderType. Default type is `.refresh`.
      */
-    func addPullLoadableView<T>(_ loadView: T, type: GitPullLoaderType = .refresh) where T: UIView, T: GitPullLoadable {
+    public func addPullLoadableView<T>(_ loadView: T, type: GitPullLoaderType = .refresh) where T: UIView, T: GitPullLoadable {
         let loader = GitPullLoader(loadView: loadView, type: type)
         insertSubview(loader, at: 0)
         loader.setUp()
