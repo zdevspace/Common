@@ -8,6 +8,12 @@
 
 import UIKit
 
+#if SWIFT_PACKAGE
+let frameworkBundle = Bundle.module
+#else
+let frameworkBundle = Bundle(for: ViewController.self)
+#endif
+
 @objc public protocol GitAlertControllerDelegate {
     @objc optional func gitAlertController(_ gitAlertController:GitAlertController, didSelectRowAt row:Int)
 }
@@ -41,7 +47,7 @@ public class GitAlertController: UIAlertController, UITableViewDataSource, UITab
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         controller = UITableViewController(style: .plain)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        controller.tableView.register(UINib.init(nibName: "GitActionCell", bundle: Bundle.module), forCellReuseIdentifier: "GitActionCell")
+        controller.tableView.register(UINib.init(nibName: "GitActionCell", bundle: frameworkBundle), forCellReuseIdentifier: "GitActionCell")
         controller.tableView.dataSource = self
         controller.tableView.delegate = self
         controller.tableView.bounces = false
