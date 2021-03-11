@@ -24,7 +24,7 @@ public extension UITextField{
     }
     
     //For Login Title
-    @objc public func setAttributedFont(){
+    @objc func setAttributedFont(){
         #if swift(>=4.2)
         let attributes:[NSAttributedString.Key : Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.lightGray,
@@ -43,7 +43,7 @@ public extension UITextField{
         self.attributedPlaceholder = placeHolder
     }
     
-    @objc public func setAttributedFont_Red(){
+    @objc func setAttributedFont_Red(){
         
         #if swift(>=4.2)
         let attributes:[NSAttributedString.Key : Any] = [
