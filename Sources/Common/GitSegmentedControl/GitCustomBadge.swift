@@ -1,6 +1,6 @@
 //
-//  CustomBadge.swift
-//  testBadgeSegmentedControl
+//  GitCustomBadge.swift
+//  Common
 //
 //  Created by Kelvin Leong on 25/03/2021.
 //

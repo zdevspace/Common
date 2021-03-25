@@ -1,6 +1,6 @@
 //
-//  MeSegmentedControl.swift
-//  testBadgeSegmentedControl
+//  GitSegmentedControl.swift
+//  Common
 //
 //  Created by Kelvin Leong on 25/03/2021.
 //
@@ -13,7 +13,7 @@ open class GitSegementedControl: UISegmentedControl {
     private var _badgeView:UIView?
     
     
-    func setBadgeNumber(badgeNumber: Int, forSegmentAtIndex segmentIndex: Int, configureBadge: ((GitCustomBadge?) -> ())?) {
+    public func setBadgeNumber(badgeNumber: Int, forSegmentAtIndex segmentIndex: Int, configureBadge: ((GitCustomBadge?) -> ())?) {
         if _segmentBadgeNumbers.count == 0 {
             _segmentBadgeNumbers = NSMutableArray(capacity: self.numberOfSegments)
             for _ in 0...self.numberOfSegments {
@@ -53,11 +53,11 @@ open class GitSegementedControl: UISegmentedControl {
         }
     }
     
-    func setBadgeNumber(badgeNumber:Int, forSegmentAtInde segmentIndex:Int){
+    public func setBadgeNumber(badgeNumber:Int, forSegmentAtInde segmentIndex:Int){
         self.setBadgeNumber(badgeNumber: badgeNumber, forSegmentAtIndex: segmentIndex, configureBadge: nil)
     }
     
-    func getBadgeNumberForSegmentAtIndex(segmentIndex:Int) -> Int {
+    public func getBadgeNumberForSegmentAtIndex(segmentIndex:Int) -> Int {
         if _segmentBadgeNumbers.count <= 0 {
             return 0;
         }
@@ -73,7 +73,7 @@ open class GitSegementedControl: UISegmentedControl {
         }
     }
     
-    func clearBadges(){
+    public func clearBadges(){
         _badgeView?.removeFromSuperview()
         _segmentBadges.removeAllObjects()
         _segmentBadgeNumbers.removeAllObjects()
