@@ -1,5 +1,4 @@
 import UIKit
-import SafariServices
 
 public protocol GitWireframeInterface: class {
     func popFromNavigationController(animated: Bool)
