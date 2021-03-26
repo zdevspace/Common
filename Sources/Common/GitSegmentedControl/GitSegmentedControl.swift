@@ -46,11 +46,12 @@ open class GitSegementedControl: UISegmentedControl {
             if let view:GitCustomBadge = _segmentBadges.object(at: segmentIndex) as? GitCustomBadge {
                 view.autoBadgeSizeWithString(badgeString: "\(badgeNumber)")
             }
-        }else {
-            if let view:GitCustomBadge = _segmentBadges.object(at: segmentIndex) as? GitCustomBadge {
-                view.autoBadgeSizeWithString(badgeString: "\(badgeNumber)")
-            }
         }
+//        else {
+//            if let view:GitCustomBadge = _segmentBadges.object(at: segmentIndex) as? GitCustomBadge {
+//                view.autoBadgeSizeWithString(badgeString: "\(badgeNumber)")
+//            }
+//        }
         
         if badgeNumber > 0 {
             configureBadge?(_segmentBadges.object(at: segmentIndex) as? GitCustomBadge)
