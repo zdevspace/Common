@@ -16,7 +16,7 @@ open class GitSegementedControl: UISegmentedControl {
     public func setBadgeNumber(badgeNumber: Int, forSegmentAtIndex segmentIndex: Int, configureBadge: ((GitCustomBadge?) -> ())?) {
         if _segmentBadgeNumbers.count == 0 {
             _segmentBadgeNumbers = NSMutableArray(capacity: self.numberOfSegments)
-            for _ in 0...self.numberOfSegments {
+            for _ in 0..<self.numberOfSegments {
                 _segmentBadgeNumbers.add(NSNumber.init(value: 0))
                 _segmentBadges.add(NSNull.init())
             }
