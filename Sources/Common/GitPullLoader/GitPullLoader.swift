@@ -46,7 +46,7 @@ public enum GitPullLoaderState: Equatable {
 /**
  GitPullLoadable is a protocol for views added to UIScrollView.
  */
-public protocol GitPullLoadable: class {
+public protocol GitPullLoadable: AnyObject {
     /**
      Handler when GitPullLoaderState value changed.
      

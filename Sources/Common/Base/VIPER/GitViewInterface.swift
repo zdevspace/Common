@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol GitViewInterface: class {
+public protocol GitViewInterface: AnyObject {
     func showProgressHUD(view:UIView)
     func hideProgressHUD(view:UIView)
 }

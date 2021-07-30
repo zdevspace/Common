@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol GitWireframeInterface: class {
+public protocol GitWireframeInterface: AnyObject {
     func popFromNavigationController(animated: Bool)
     func dismiss(animated: Bool)
     

@@ -11,7 +11,7 @@ import UIKit
 /**
  Delegate for GitPullLoadView.
  */
-public protocol GitPullLoadViewDelegate: class {
+public protocol GitPullLoadViewDelegate: AnyObject {
     /**
      Handler when GitPullLoaderState value changed.
      

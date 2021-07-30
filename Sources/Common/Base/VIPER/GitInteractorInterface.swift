@@ -1,4 +1,4 @@
-public protocol GitInteractorInterface: class {
+public protocol GitInteractorInterface: AnyObject {
 }
 
 extension GitInteractorInterface {

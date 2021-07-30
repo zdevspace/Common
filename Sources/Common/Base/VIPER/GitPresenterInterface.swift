@@ -1,4 +1,4 @@
-public protocol GitPresenterInterface: class {
+public protocol GitPresenterInterface: AnyObject {
     func viewDidLoad()
     func viewWillAppear(animated: Bool)
     func viewDidAppear(animated: Bool)
