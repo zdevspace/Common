@@ -391,7 +391,7 @@ public class GitProgressHUD: UIView {
             if indicator as? UIActivityIndicatorView == nil {
                 // Update to indeterminate mode
                 indicator?.removeFromSuperview()
-                let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+                let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
                 activityIndicator.startAnimating()
                 indicator = activityIndicator
                 bezelView?.addSubview(activityIndicator)

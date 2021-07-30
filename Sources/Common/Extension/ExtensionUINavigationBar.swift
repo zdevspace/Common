@@ -32,7 +32,7 @@ extension UINavigationBar {
         self.shadowImage = UIImage()
         self.isTranslucent = true
         
-        self.barStyle = .blackOpaque
+        self.barStyle = .black
         self.subviews[0].alpha = 1
         self.barTintColor = UIColor.white
     }
