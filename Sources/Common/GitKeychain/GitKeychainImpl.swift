@@ -13,8 +13,8 @@ extension GitKeychain {
         private enum GitKeychainConstants {
             static let afterFirstUnlock = kSecAttrAccessibleAfterFirstUnlock as String
             static let afterFirstUnlockThisDeviceOnly = kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly as String
-            static let always = kSecAttrAccessibleAlways as String
-            static let alwaysThisDeviceOnly = kSecAttrAccessibleAlwaysThisDeviceOnly as String
+//            static let always = kSecAttrAccessibleAlways as String
+//            static let alwaysThisDeviceOnly = kSecAttrAccessibleAlwaysThisDeviceOnly as String
             static let whenPasscodeSetThisDeviceOnly = kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly as String
             static let whenUnlocked = kSecAttrAccessibleWhenUnlocked as String
             static let whenUnlockedThisDeviceOnly = kSecAttrAccessibleWhenUnlockedThisDeviceOnly as String
@@ -35,12 +35,12 @@ extension GitKeychain {
          The data in the keychain item can always be accessed regardless of whether the device is locked.
          This is not recommended for application use. Items with this attribute migrate to a new device when using encrypted backups.
          */
-        case always
+//        case always
         /**
          The data in the keychain item can always be accessed regardless of whether the device is locked.
          This is not recommended for application use. Items with this attribute do not migrate to a new device. Thus, after restoring from a backup of a different device, these items will not be present.
          */
-        case alwaysThisDeviceOnly
+//        case alwaysThisDeviceOnly
         /**
          The data in the keychain can only be accessed when the device is unlocked. Only available if a passcode is set on the device.
          This is recommended for items that only need to be accessible while the application is in the foreground. Items with this attribute never migrate to a new device. After a backup is restored to a new device, these items are missing. No items can be stored in this class on devices without a passcode. Disabling the device passcode causes all items in this class to be deleted.
@@ -64,10 +64,10 @@ extension GitKeychain {
                 return GitKeychainConstants.afterFirstUnlock
             case .afterFirstUnlockThisDeviceOnly:
                 return GitKeychainConstants.afterFirstUnlockThisDeviceOnly
-            case .always:
-                return GitKeychainConstants.always
-            case .alwaysThisDeviceOnly:
-                return GitKeychainConstants.alwaysThisDeviceOnly
+//            case .always:
+//                return GitKeychainConstants.always
+//            case .alwaysThisDeviceOnly:
+//                return GitKeychainConstants.alwaysThisDeviceOnly
             case .whenPasscodeSetThisDeviceOnly:
                 return GitKeychainConstants.whenPasscodeSetThisDeviceOnly
             case .whenUnlocked:
@@ -83,10 +83,10 @@ extension GitKeychain {
                 self = .afterFirstUnlock
             case GitKeychainConstants.afterFirstUnlockThisDeviceOnly:
                 self = .afterFirstUnlockThisDeviceOnly
-            case GitKeychainConstants.always:
-                self = .always
-            case GitKeychainConstants.alwaysThisDeviceOnly:
-                self = .alwaysThisDeviceOnly
+//            case GitKeychainConstants.always:
+//                self = .always
+//            case GitKeychainConstants.alwaysThisDeviceOnly:
+//                self = .alwaysThisDeviceOnly
             case GitKeychainConstants.whenPasscodeSetThisDeviceOnly:
                 self = .whenPasscodeSetThisDeviceOnly
             case GitKeychainConstants.whenUnlocked:

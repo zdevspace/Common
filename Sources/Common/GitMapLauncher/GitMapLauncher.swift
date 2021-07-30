@@ -123,7 +123,7 @@ public enum GitMapLauncher {
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url, completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(url)
+            _ = UIApplication.shared.openURL(url)
         }
     }
     
