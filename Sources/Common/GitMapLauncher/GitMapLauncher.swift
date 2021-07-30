@@ -25,6 +25,7 @@ import MapKit
  <string>moovit</string>
  </array>
  */
+@available(iOSApplicationExtension, unavailable)
 public enum GitMapLauncher {
 
     /// Check if a navigation app is installed on the device.

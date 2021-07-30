@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 extension UINavigationBar {
     open func setTransparent() {
         self.setBackgroundImage(UIImage(), for: .default)

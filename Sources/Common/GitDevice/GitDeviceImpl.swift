@@ -9,6 +9,7 @@
 import UIKit
 import ExternalAccessory
 
+@available(iOSApplicationExtension, unavailable)
 extension GitDevice: GitDeviceStub {
     public static func getDeviceUUID() -> String {
         return UIDevice.current.identifierForVendor!.uuidString
